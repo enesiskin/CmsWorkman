@@ -1,0 +1,9 @@
+RewriteEngine on
+
+ErrorDocument 404 http://localhost/workman/404.php
+
+RewriteRule ^contact$ contact.php [NC,L]
+RewriteRule ^home$ index.php [NC,L]
+RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+
+RewriteRule ^([0-9a-zA-Z-_]+)-([0-9]+)$ view_services.php?sef=$1&services_id=$2 [L,QSA]
